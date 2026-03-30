@@ -55,7 +55,7 @@ nav{position:fixed;top:0;left:0;width:100%;z-index:1000;display:flex;justify-con
 .btn-cyan:hover{background:rgba(6,182,212,.08);border-color:var(--cyan);transform:translateY(-3px);}
 
 .tech-float-wrap{position:relative;width:320px;height:380px;}
-.profile-glow-card{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:200px;height:200px;border-radius:28px;background:linear-gradient(135deg,rgba(168,85,247,.15),rgba(236,72,153,.1));border:1px solid rgba(168,85,247,.3);display:flex;align-items:center;justify-content:center;font-size:80px;box-shadow:0 0 60px var(--purple-glow),0 0 120px rgba(168,85,247,.1);animation:floatCard 4s ease-in-out infinite;z-index:2;}
+.profile-glow-card{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:200px;height:200px;border-radius:28px;background:linear-gradient(135deg,rgba(168,85,247,.15),rgba(236,72,153,.1));border:1px solid rgba(168,85,247,.3);display:flex;align-items:center;justify-content:center;overflow:hidden;box-shadow:0 0 60px var(--purple-glow),0 0 120px rgba(168,85,247,.1);animation:floatCard 4s ease-in-out infinite;z-index:2;padding:0;}
 @keyframes floatCard{0%,100%{transform:translate(-50%,-50%) translateY(0)}50%{transform:translate(-50%,-50%) translateY(-14px)}}
 .tech-pill{position:absolute;display:flex;align-items:center;gap:7px;padding:8px 14px;border-radius:50px;font-size:12px;font-weight:600;backdrop-filter:blur(12px);animation:floatPill 3s ease-in-out infinite;white-space:nowrap;box-shadow:0 4px 20px rgba(0,0,0,.3);}
 .tp-purple{background:rgba(168,85,247,.15);border:1px solid rgba(168,85,247,.4);color:var(--purple-light);top:8%;left:0;animation-delay:0s;}
@@ -168,7 +168,7 @@ footer{position:relative;z-index:2;border-top:1px solid var(--border);padding:40
 .social-link{width:40px;height:40px;border-radius:10px;border:1px solid var(--border);display:flex;align-items:center;justify-content:center;color:var(--text-dim);font-size:15px;text-decoration:none;transition:all .3s;}
 .social-link:hover{border-color:var(--purple);color:var(--purple-light);background:rgba(168,85,247,.08);transform:translateY(-3px);box-shadow:0 4px 16px var(--purple-glow);}
 
-.reveal{opacity:0;transform:translateY(28px);transition:all .65s cubic-bezier(.16,1,.3,1);}
+.reveal{opacity:0;transform:translateY(28px);transition:all .65s cubic-bezier(.16,1,.3,1);will-change:transform,opacity;}
 .reveal.active{opacity:1;transform:translateY(0);}
 
 @media(max-width:900px){
@@ -222,7 +222,7 @@ footer{position:relative;z-index:2;border-top:1px solid var(--border);padding:40
   </div>
   <div class="hero-right">
     <div class="tech-float-wrap">
-      <div class="profile-glow-card">👨‍💻</div>
+      <div class="profile-glow-card"><img src="profile.jpg" alt="Mehar Ali" style="width:100%;height:100%;object-fit:cover;border-radius:50%;display:block;"></div>
       <div class="tech-pill tp-purple"><i class="fab fa-docker"></i> Docker</div>
       <div class="tech-pill tp-cyan"><i class="fas fa-dharmachakra"></i> Kubernetes</div>
       <div class="tech-pill tp-pink"><i class="fab fa-aws"></i> AWS</div>
@@ -242,7 +242,7 @@ footer{position:relative;z-index:2;border-top:1px solid var(--border);padding:40
     <div class="info-card reveal">
       <div class="card-top">
         <div class="avatar-wrap">
-          <div class="avatar">👨‍💻</div>
+          <div class="avatar" style="padding:0;overflow:hidden;"><img src="profile.jpg" alt="Mehar Ali" style="width:100%;height:100%;object-fit:cover;border-radius:16px;"></div>
           <div><div class="avatar-name">Mehar Ali</div><div class="avatar-role">Cloud & DevOps Engineer</div></div>
         </div>
         <div class="info-row"><span class="info-key">DEGREE</span><span class="info-val">BSCS — Kohsar University</span></div>
@@ -250,7 +250,7 @@ footer{position:relative;z-index:2;border-top:1px solid var(--border);padding:40
         <div class="info-row"><span class="info-key">EXPERIENCE</span><span class="info-val">6+ Months</span></div>
         <div class="info-row"><span class="info-key">LOCATION</span><span class="info-val">Islamabad, Pakistan 🇵🇰</span></div>
         <div class="info-row"><span class="info-key">STATUS</span><span class="info-val iv-green">● Available for Work</span></div>
-        <div class="info-row"><span class="info-key">EMAIL</span><span class="info-val" style="font-size:11px">meharali5831713@gmail.com</span></div>
+        <div class="info-row"><span class="info-key">EMAIL</span><span class="info-val" style="font-size:11px"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="f19c94999083909d98c4c9c2c0c6c0c2b1969c90989ddf929e9c">[email&#160;protected]</a></span></div>
       </div>
       <div class="card-body">
         <div class="stats-row">
@@ -354,7 +354,7 @@ footer{position:relative;z-index:2;border-top:1px solid var(--border);padding:40
   <p class="section-sub">Open to new opportunities and collaborations.</p>
   <div class="contact-grid">
     <div class="contact-left reveal">
-      <div class="contact-item"><div class="c-icon"><i class="fas fa-envelope"></i></div><div><div class="c-label">Email</div><div class="c-val"><a href="mailto:meharali5831713@gmail.com">meharali5831713@gmail.com</a></div></div></div>
+      <div class="contact-item"><div class="c-icon"><i class="fas fa-envelope"></i></div><div><div class="c-label">Email</div><div class="c-val"><a href="/cdn-cgi/l/email-protection#731e161b1201121f1a464b404244424033141e121a1f5d101c1e"><span class="__cf_email__" data-cfemail="e18c84898093808d88d4d9d2d0d6d0d2a1868c80888dcf828e8c">[email&#160;protected]</span></a></div></div></div>
       <div class="contact-item"><div class="c-icon"><i class="fas fa-map-marker-alt"></i></div><div><div class="c-label">Location</div><div class="c-val">Islamabad, Pakistan 🇵🇰</div></div></div>
       <div class="contact-item"><div class="c-icon"><i class="fab fa-linkedin"></i></div><div><div class="c-label">LinkedIn</div><div class="c-val"><a href="https://pk.linkedin.com/in/mehar-ali-9b1b63378" target="_blank">linkedin.com/in/mehar-ali</a></div></div></div>
       <div class="contact-item"><div class="c-icon"><i class="fab fa-instagram"></i></div><div><div class="c-label">Instagram</div><div class="c-val"><a href="https://www.instagram.com/itx_mehar35/" target="_blank">@itx_mehar35</a></div></div></div>
@@ -377,27 +377,24 @@ footer{position:relative;z-index:2;border-top:1px solid var(--border);padding:40
   <div class="social-links">
     <a href="https://pk.linkedin.com/in/mehar-ali-9b1b63378" target="_blank" class="social-link" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
     <a href="https://www.instagram.com/itx_mehar35/" target="_blank" class="social-link" title="Instagram"><i class="fab fa-instagram"></i></a>
-    <a href="mailto:meharali5831713@gmail.com" class="social-link" title="Email"><i class="fas fa-envelope"></i></a>
+    <a href="/cdn-cgi/l/email-protection#0a676f626b786b66633f32393b3d3b394a6d676b636624696567" class="social-link" title="Email"><i class="fas fa-envelope"></i></a>
     <a href="https://meharali135.github.io/portfolio/" target="_blank" class="social-link" title="Portfolio"><i class="fas fa-globe"></i></a>
     <a href="https://github.com" target="_blank" class="social-link" title="GitHub"><i class="fab fa-github"></i></a>
   </div>
 </footer>
 
-<script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
 const phrases=['Kubernetes Administrator','CI/CD Pipeline Engineer','Cloud Infrastructure Specialist','Apache Kafka Developer','Linux System Administrator','Docker & Container Expert','DevOps Automation Engineer'];
 let pi=0,ci=0,del=false;
 const el=document.getElementById('typed');
 function type(){const p=phrases[pi];if(!del){el.textContent=p.substring(0,ci+1);ci++;if(ci===p.length){del=true;setTimeout(type,2000);return;}}else{el.textContent=p.substring(0,ci-1);ci--;if(ci===0){del=false;pi=(pi+1)%phrases.length;}}setTimeout(type,del?40:80);}
 type();
 
-const obs=new IntersectionObserver(entries=>{entries.forEach((e,i)=>{if(e.isIntersecting)setTimeout(()=>e.target.classList.add('active'),i*80);});},{threshold:.08});
+const obs=new IntersectionObserver(entries=>{entries.forEach((e,i)=>{if(e.isIntersecting)setTimeout(()=>e.target.classList.add('active'),i*80);});},{threshold:0,rootMargin:"0px 0px -50px 0px"});
 document.querySelectorAll('.reveal').forEach(r=>obs.observe(r));
 
 document.querySelectorAll('a[href^="#"]').forEach(a=>{a.addEventListener('click',e=>{e.preventDefault();const t=document.querySelector(a.getAttribute('href'));if(t)t.scrollIntoView({behavior:'smooth',block:'start'});});});
 
 window.addEventListener('scroll',()=>{const sections=document.querySelectorAll('section');let cur='';sections.forEach(s=>{if(window.scrollY>=s.offsetTop-200)cur=s.id;});document.querySelectorAll('.nav-links a').forEach(a=>{const active=a.getAttribute('href').slice(1)===cur;a.style.color=active?'var(--purple-light)':'';});});
 
-function sendMsg(){const n=document.getElementById('f-name').value,e=document.getElementById('f-email').value,s=document.getElementById('f-subject').value,m=document.getElementById('f-msg').value;if(!n||!e||!s||!m){alert('Please fill all fields.');return;}alert('Message sent! 🎉\n\nHi '+n+', Mehar Ali will get back to you at '+e+' soon!');['f-name','f-email','f-subject','f-msg'].forEach(id=>document.getElementById(id).value='');}
-</script>
-</body>
-</html>
+function sendMsg(){const n=docu
