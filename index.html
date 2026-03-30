@@ -384,12 +384,10 @@ footer{position:relative;z-index:2;border-top:1px solid var(--border);padding:40
 </footer>
 
 <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
-setTimeout(function(){
-const phrases=['Kubernetes Administrator','CI/CD Pipeline Engineer','Cloud Infrastructure Specialist','Apache Kafka Developer','Linux System Administrator','Docker & Container Expert','DevOps Automation Engineer'];
-let pi=0,ci=0,del=false;
-const el=document.getElementById('typed'); if(!el) return;
-function type(){const p=phrases[pi];if(!del){el.textContent=p.substring(0,ci+1);ci++;if(ci===p.length){del=true;setTimeout(type,2000);return;}}else{el.textContent=p.substring(0,ci-1);ci--;if(ci===0){del=false;pi=(pi+1)%phrases.length;}}setTimeout(type,del?40:80);}
-type();
+const _p=['Kubernetes Administrator','CI/CD Pipeline Engineer','Cloud Infrastructure Specialist','Apache Kafka Developer','Linux System Administrator','Docker & Container Expert','DevOps Automation Engineer'];
+let _pi=0,_ci=0,_dl=false;
+function _t(){var el=document.getElementById('typed');if(!el){setTimeout(_t,100);return;}var p=_p[_pi];if(!_dl){el.textContent=p.substring(0,_ci+1);_ci++;if(_ci===p.length){_dl=true;setTimeout(_t,2000);return;}}else{el.textContent=p.substring(0,_ci-1);_ci--;if(_ci===0){_dl=false;_pi=(_pi+1)%_p.length;}}setTimeout(_t,_dl?40:80);}
+_t();
 
 const obs=new IntersectionObserver(entries=>{entries.forEach((e,i)=>{if(e.isIntersecting)setTimeout(()=>e.target.classList.add('active'),i*80);});},{threshold:0,rootMargin:"0px 0px -50px 0px"});
 document.querySelectorAll('.reveal').forEach(r=>obs.observe(r));
